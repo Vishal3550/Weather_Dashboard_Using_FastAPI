@@ -50,12 +50,15 @@ weather_dashboard/
 ## 📊 Dashboard View
 
 - Dashboard Login
+  
 ![Dashboard_Login](https://github.com/Vishal3550/Weather_Dashboard_Using_FastAPI/blob/main/Dashboard_Login.png)
 
 - Dashboard Register
+  
 ![Dashboard_Register](https://github.com/Vishal3550/Weather_Dashboard_Using_FastAPI/blob/main/Dashboard_Register.png)
 
 - Dashboard
+  
 ![Dashboard](https://github.com/Vishal3550/Weather_Dashboard_Using_FastAPI/blob/main/Dashboard.png)
 
 ---
