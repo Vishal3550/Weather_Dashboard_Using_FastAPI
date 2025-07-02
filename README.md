@@ -160,4 +160,4 @@ Applied modern web development practices
 
 ## 📬 Contact
 📧 Email: vishal843327k@gmail.com
-💼 LinkedIn: linkedin.com/in/vishal843327
+💼 LinkedIn: linkedin.com/in/vk959/
