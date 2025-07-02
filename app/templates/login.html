@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="/static/login.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form action="/do-login" method="post">
+      <input name="email" type="email" placeholder="Email" required>
+      <input name="password" type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <a href="/register">Register</a>
+  </div>
+</body>
+</html>

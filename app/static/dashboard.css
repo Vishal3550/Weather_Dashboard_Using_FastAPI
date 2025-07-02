@@ -1,0 +1,202 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url('../static/img/bg.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dashboard Card */
+.container {
+  position: relative;
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(186, 104, 200, 0.3);
+  width: 90vw;        /* Use viewport width */
+  max-width: 800px;   /* Bigger max */
+  border: 2px solid red;
+}
+
+.container h1 {
+  /* text-align: center; */
+  font-size: 35px;
+  color: #1060d0;
+  /* margin-bottom: 20px;
+  word-break: break-all; */
+  margin: 0;
+  word-break: break-word;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 10px; */
+  margin-bottom: 20px;
+}
+
+/* Welcome Title */
+.container h2 {
+  font-size: 22px;
+  color: #467fd0;
+  margin-bottom: 20px;
+  word-break: break-all;
+}
+
+
+.weather-cards {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.weather-cards p {
+  flex: 1 1 30%;
+  background-color: #f5f8ff;
+  border-radius: 12px;
+  padding: 20px 10px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  position: relative;
+  border: 2px solid rgb(0, 195, 255);
+}
+
+/* Temperature */
+.weather-cards p:nth-child(1)::before {
+  content: "Temperature";
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  color: #467fd0;
+  margin-bottom: 6px;
+}
+
+.weather-cards p:nth-child(1)::after {
+  content: "🌡️";
+  font-size: 50px;
+  display: block;
+  margin-top: 8px;
+  rotate: 45deg;
+}
+
+/* Humidity */
+.weather-cards p:nth-child(2)::before {
+  content: "Humidity";
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  color: #467fd0;
+  margin-bottom: 6px;
+}
+
+.weather-cards p:nth-child(2)::after {
+  content: "💧";
+  font-size: 50px;
+  display: block;
+  margin-top: 8px;
+}
+
+/* Condition */
+.weather-cards p:nth-child(3)::before {
+  content: "Condition";
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  color: #467fd0;
+  margin-bottom: 6px;
+}
+
+.weather-cards p:nth-child(3)::after {
+  content: "☁️";
+  font-size: 50px;
+  display: block;
+  margin-top: 8px;
+}
+
+
+
+/* Buttons (shared style) */
+button {
+  background-color: #467fd0;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #467fd0;
+}
+
+/* Input Form Styling */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+form input {
+  flex: 1 1 45%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Submit buttons inside forms */
+form button[type="submit"] {
+  flex: 1 1 100%;
+}
+
+/* Button row styling */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Auto-detect */
+.auto-detect-btn {
+  background-color: #467fd0;
+  flex: 1;
+  width: 40px;
+  /* padding: 1px 3px;   */
+  /* font-size: 15px;     */
+}
+
+/* Logout */
+.logout-btn {
+  background-color: #e6412f;
+  /* flex: 1; */
+
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.logout-btn:hover {
+  background-color: #b71c1c;
+}
