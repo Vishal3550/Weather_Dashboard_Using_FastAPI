@@ -8,7 +8,8 @@
 <body>
   <div class="container">
     <div class="header-row">
-      <h1>Weather Dashboard</h1>
+      <h1><span style="font-size: 50px;">🌤️</span>Weather Dashboard</h1>
+      
       <form action="/logout" method="get">
         <button type="submit" class="logout-btn">Logout</button>
       </form>
@@ -16,7 +17,9 @@
 
     <h2>User ID : {{ user.email }}</h2>
 
-    <h2>Current Weather</h2>
+    <h2 style="text-align: center; font-size: 25px; color: #1060d0;">Current Weather</h2>
+    <h2>Location : {{ user.city }}, {{ user.country }}</h2>
+
 
     {% if weather %}
     <div class="weather-cards">
@@ -36,12 +39,9 @@
       <button type="submit">Update Location</button>
     </form>
 
+
     <div class="button-row">
       <button onclick="detectLocation()" class="auto-detect-btn">Auto-detect Location</button>
-
-      <!-- <form action="/logout" method="get">
-        <button type="submit" class="logout-btn">Logout</button>
-      </form> -->
     </div>
   </div>
 
