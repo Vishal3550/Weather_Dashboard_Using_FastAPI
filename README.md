@@ -69,7 +69,7 @@ weather_dashboard/
 
 ```bash
 git clone https://github.com/your-username/personal-weather-dashboard.git
-cd personal-weather-dashboard
+cd weather_dashboard
 
 
 ### 2. Create Virtual Environment
