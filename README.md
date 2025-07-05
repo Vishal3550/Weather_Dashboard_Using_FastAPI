@@ -21,7 +21,7 @@ A secure, user-friendly weather tracking web application built using **FastAPI**
 - 🚪 **Logout Functionality**
   - Deletes JWT token from browser to end session
 - 🧾 **Download CSV**  
-  - Allows users to export hourly weather data (temperature, humidity, condition) as a CSV file  
+  - Allows users to export weather data (temperature, humidity, condition) as a CSV file  
   - One-click CSV download button on the dashboard  
 
 ---
