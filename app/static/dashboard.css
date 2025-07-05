@@ -79,6 +79,26 @@ body {
   border: 2px solid rgb(0, 195, 255);
 }
 
+
+
+
+.download-btn {
+  background-color: #008CBA;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background-color: #0073a6;
+}
+
+
+
+
 /* Temperature */
 .weather-cards p:nth-child(1)::before {
   content: "Temperature";
