@@ -8,6 +8,11 @@ from starlette.status import HTTP_303_SEE_OTHER
 from fastapi import Cookie
 from . import database, models, schemas, auth, weather
 
+from fastapi.responses import StreamingResponse
+import csv, io
+from datetime import datetime
+
+
 models.Base.metadata.create_all(bind=database.engine)
 
 app = FastAPI()
@@ -108,7 +113,6 @@ def dashboard(
         "weather": weather_data
     })
 
-
 # Update location
 
 @app.post("/update-location")
@@ -132,3 +136,32 @@ def update_location(
     db.commit()
 
     return RedirectResponse("/dashboard", status_code=HTTP_303_SEE_OTHER)
+
+
+
+# Simulated hourly data store
+hourly_data = [
+    {"time": "2025-07-05 08:00", "temperature": "27.5", "humidity": "71", "condition": "overcast clouds"},
+    {"time": "2025-07-05 09:00", "temperature": "28.0", "humidity": "69", "condition": "cloudy"},
+    {"time": "2025-07-05 10:00", "temperature": "29.2", "humidity": "65", "condition": "sunny"},
+    # You can add logic to log per hour automatically.
+]
+
+@app.get("/download_csv")
+def download_csv(access_token: str = Cookie(default=None)):
+    if not access_token:
+        raise HTTPException(401, "Not authenticated")
+    
+    token = access_token.replace("Bearer ", "")
+    payload = auth.decode_access_token(token)
+    if not payload:
+        raise HTTPException(401, "Invalid token")
+
+    buffer = io.StringIO()
+    writer = csv.writer(buffer)
+    writer.writerow(["Time", "Temperature", "Humidity", "Condition"])
+    for row in hourly_data:
+        writer.writerow([row["time"], row["temperature"], row["humidity"], row["condition"]])
+    
+    buffer.seek(0)
+    return StreamingResponse(buffer, media_type="text/csv", headers={"Content-Disposition": "attachment; filename=weather_hourly_data.csv"})
