@@ -71,7 +71,7 @@ weather_dashboard/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/personal-weather-dashboard.git
+git clone https://github.com/Vishal3550/Weather_Dashboard_Using_FastAPI.git
 cd weather_dashboard
 
 
